@@ -1,1 +1,1 @@
-web: node bolt.js
+web: node index.js
