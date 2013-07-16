@@ -2,10 +2,13 @@
 var http = require("http");
 var url = require("url");
 
-function start(){  //created a module to start the server
+function start(route, handle){  //created a module to start the server
 	function onRequest(request, response){
 		var pathname = url.parse(request.url).pathname; //distinguishes request based on url path requested
 		console.log("Request for " + pathname + " Received.");
+
+		route(hande, pathname); //route callback
+
 		response.writeHead(200, {"Content-Type": "text/plain"});
 		response.write("Hello World");
 		response.end();
