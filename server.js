@@ -7,7 +7,7 @@ function start(route, handle){  //created a module to start the server
 		var pathname = url.parse(request.url).pathname; //distinguishes request based on url path requested
 		console.log("Request for " + pathname + " Received.");
 
-		route(hande, pathname); //route callback
+		route(handle, pathname); //route callback
 
 		response.writeHead(200, {"Content-Type": "text/plain"});
 		response.write("Hello World");
